@@ -1,0 +1,24 @@
+name: Update Dependencies
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [new_version_with_buzzing_theme]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+      - name: Yarn add
+        run: yarn add gatsby-theme-buzzing
+      - name: Yarn
+        run: "yarn"
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          commit-message: "chore: auto update dependencies"
+          branch: update-dependencies
+          delete-branch: true
+          title: "chore: auto update dependencies"
