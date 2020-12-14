@@ -52,7 +52,7 @@ plugins = plugins.concat([
       short_name: `Reddit热门`,
       start_url: `/`,
       lang: `zh`,
-      description: `用中文浏览Reddit上的热门内容`,
+      description: `用中文浏览Reddit热门内容`,
       background_color: `#f7f0eb`,
       theme_color: `#FF4500`,
       display: `standalone`,
@@ -62,8 +62,15 @@ plugins = plugins.concat([
           start_url: `/en/`,
           lang: `en`,
           name: `Reddit Top`,
-          short_name: `Reddit`,
-          description: `The most popular posts on Reddit`,
+          short_name: `RedditTop`,
+          description: `See what's buzzing on Reddit in your native language`,
+        },
+        {
+          start_url: `/zh-Hant/`,
+          lang: `zh-Hant`,
+          name: `Reddit熱門`,
+          short_name: `Reddit熱門`,
+          description: `用中文查看 Reddit 上的熱門內容`,
         },
       ],
     },
@@ -84,6 +91,7 @@ module.exports = {
     title: `Buzzing on Reddit`,
     author: `Reddit`,
     description: `See what's buzzing on Reddit in your native language`,
+    keywords: ["Reddit", "buzzing", "Reddit中文"],
     siteUrl: "https://reddit.buzzing.cc",
     menuLinks: [
       {
@@ -93,6 +101,7 @@ module.exports = {
       {
         name: "RSS",
         url: "/rss.xml",
+        prefetch: false,
       },
     ],
     social: [
