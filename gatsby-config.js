@@ -1,3 +1,4 @@
+const { siteMetadata } = require("./config");
 const isDev =
   (process.env.NODE_ENV === "development" || process.env.LOCAL === "true") &&
   process.env.LOCAL !== "false";
@@ -62,31 +63,24 @@ plugins = plugins.concat([
   {
     resolve: `gatsby-plugin-manifest`,
     options: {
-      name: `Reddit热门`,
-      short_name: `Reddit热门`,
+      name: siteMetadata.title,
+      short_name: siteMetadata.shortTitle,
       start_url: `/`,
-      lang: `zh`,
-      description: `用中文浏览Reddit热门内容`,
+      lang: siteMetadata.locale,
+      description: siteMetadata.description,
       background_color: `#f7f0eb`,
       theme_color: `#FF4500`,
       display: `standalone`,
       icon: `src/images/icon.png`,
-      localize: [
-        {
-          start_url: `/en/`,
-          lang: `en`,
-          name: `Reddit Top`,
-          short_name: `RedditTop`,
-          description: `See what's buzzing on Reddit in your native language`,
-        },
-        {
-          start_url: `/zh-Hant/`,
-          lang: `zh-Hant`,
-          name: `Reddit熱門`,
-          short_name: `Reddit熱門`,
-          description: `用中文查看 Reddit 上的熱門內容`,
-        },
-      ],
+      localize: siteMetadata.localize.map((item) => {
+        return {
+          start_url: `/${item.locale}/`,
+          lang: item.locale,
+          name: item.title,
+          short_name: item.shortTitle,
+          description: item.description,
+        };
+      }),
     },
   },
   {
@@ -100,30 +94,7 @@ plugins = plugins.concat([
   },
 ]);
 module.exports = {
+  flags: { QUERY_ON_DEMAND: true },
   plugins: plugins,
-  siteMetadata: {
-    title: `Buzzing on Reddit`,
-    author: `Reddit`,
-    description: `See what's buzzing on Reddit in your native language`,
-    keywords: ["Reddit", "buzzing"],
-    siteUrl: "https://reddit.buzzing.cc",
-    menuLinks: [
-      {
-        name: "Weekly Selection",
-        url: "/issues",
-      },
-      {
-        name: "RSS",
-        url: "/rss.xml",
-        prefetch: false,
-      },
-    ],
-    social: [
-      {
-        name: `Reddit`,
-        url: `https://www.reddit.com/`,
-        external: true,
-      },
-    ],
-  },
+  siteMetadata,
 };
