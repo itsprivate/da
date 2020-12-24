@@ -23,6 +23,11 @@ const siteMetadata = {
       url: `https://www.reddit.com/`,
       external: true,
     },
+    {
+      name: `Buzzing`,
+      url: `https://www.buzzing.cc/`,
+      external: true,
+    },
   ],
   localize: [
     {
