@@ -19,10 +19,7 @@ if (isDev) {
       branch: `main`,
       // Only import the docs folder from a codebase.
       patterns: [
-        "data/reddit-placeholder/1.json",
-        "data/tweet-placeholder/1.json",
-        "data/hn-placeholder/1.json",
-        "data/ph-placeholder/1.json",
+        "data/*-placeholder/1.json",
         "data/reddit-top/**",
         "data/reddit-top-issues/**",
       ],
@@ -37,10 +34,7 @@ if (isDev) {
       branch: `main`,
       // Only import the docs folder from a codebase.
       patterns: [
-        "data/reddit-placeholder/1.json",
-        "data/tweet-placeholder/1.json",
-        "data/hn-placeholder/1.json",
-        "data/ph-placeholder/1.json",
+        "data/*-placeholder/1.json",
         "data/reddit-top/**",
         "data/reddit-top-issues/**",
       ],
