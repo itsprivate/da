@@ -18,11 +18,7 @@ if (isDev) {
       remote: `git@github.com:itsprivate/ts-test.git`,
       branch: `main`,
       // Only import the docs folder from a codebase.
-      patterns: [
-        "data/*-placeholder/1.json",
-        "data/reddit-top/**",
-        "data/reddit-top-issues/**",
-      ],
+      patterns: ["data/*-placeholder/1.json", "data/redirect-newstop/**"],
     },
   });
 } else {
@@ -33,11 +29,7 @@ if (isDev) {
       remote: `https://github.com/itsprivate/ts.git`,
       branch: `main`,
       // Only import the docs folder from a codebase.
-      patterns: [
-        "data/*-placeholder/1.json",
-        "data/reddit-top/**",
-        "data/reddit-top-issues/**",
-      ],
+      patterns: ["data/*-placeholder/1.json", "data/redirect-newstop/**"],
     },
   });
 }
@@ -45,7 +37,7 @@ plugins = plugins.concat([
   {
     resolve: `gatsby-theme-buzzing`,
     options: {
-      tweetTypeName: ["TweetsJson", "twitterStatusesUserTimelineMyTweet"],
+      tweetTypeName: ["TweetJson", "twitterStatusesUserTimelineMyTweet"],
       redditTypeName: ["RedditJson"],
       issueTypeName: ["RedditTopIssuesJson"],
       localesPath: localesPath,
@@ -82,7 +74,7 @@ plugins = plugins.concat([
     options: {
       // You can add multiple tracking ids and a pageview event will be fired for all of them.
       trackingIds: [
-        "G-GQVR44BC8T", // Google Analytics / GA
+        "G-KQ0RWMXYT4", // Google Analytics / GA
       ],
     },
   },
