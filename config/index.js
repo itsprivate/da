@@ -61,7 +61,7 @@ const siteMetadata = {
         // },
         {
           name: "RSS",
-          url: "/rss.xml",
+          url: "/zh-Hant/rss.xml",
           prefetch: false,
         },
       ],
