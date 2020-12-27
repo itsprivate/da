@@ -7045,10 +7045,10 @@ gatsby-theme-blog-core@^2.0.2:
     gatsby-transformer-sharp "^2.5.11"
     remark-slug "^5.1.2"
 
-gatsby-theme-buzzing@^0.15.0:
-  version "0.15.0"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.15.0.tgz#39ee723b72ff8ff906fff155aa6e974d32f513c4"
-  integrity sha512-4ijF1G2cZHM4r6yetlHrK4utKowjmak/q8qIP+vjNvA60RJzNv2nuC6hgqAKTFzvDoD/Zqjhgv/Z7mx0f56NTg==
+gatsby-theme-buzzing@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.npmjs.org/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.16.0.tgz#28738114f8ca16c991ad580ee4a9a0a6e830e0a4"
+  integrity sha512-QH4UTtisA5TqPK06kuv+uVFDfKfTCH9BIj3B0adCKcMPZWffTR57COdLtBTIRAZvqdOeVDTwfoD+tqmS3/9i3w==
   dependencies:
     fs-extra "^9.0.1"
     gatsby-plugin-emotion "^4.3.10"
@@ -7056,7 +7056,7 @@ gatsby-theme-buzzing@^0.15.0:
     gatsby-plugin-robots-txt "^1.5.5"
     gatsby-plugin-sitemap "^2.8.0"
     gatsby-theme-i18n-react-i18next "^1.0.4"
-    gatsby-theme-timeline "^0.1.102"
+    gatsby-theme-timeline "^0.1.103"
     gatsby-transformer-json "^2.4.14"
     path "^0.12.7"
     theme-ui "^0.4.0-rc.5"
@@ -7074,10 +7074,10 @@ gatsby-theme-i18n@^1.0.4:
     gatsby-plugin-react-helmet "^3.3.10"
     react-helmet "^6.1.0"
 
-gatsby-theme-timeline@^0.1.102:
-  version "0.1.102"
-  resolved "https://registry.npmjs.org/gatsby-theme-timeline/-/gatsby-theme-timeline-0.1.102.tgz#2292e21fc84da40c21102987d944457e16960d2b"
-  integrity sha512-kFp95xF0+9sQEa9eL1bZXnadq5Xe4uPzVHTpUgjJ7aeqHRd1k8umdthEFqxYs6jFxBBchjUSNWCaPvi9HBY21g==
+gatsby-theme-timeline@^0.1.103:
+  version "0.1.103"
+  resolved "https://registry.npmjs.org/gatsby-theme-timeline/-/gatsby-theme-timeline-0.1.103.tgz#c669584a7f835f89d82948613fbab52cdbb8b0d3"
+  integrity sha512-as+NvJ6w9VtBTT+QsfeTF5OFJTd5DIfIX8lNJVFVU3oKg659VLo0P8INcb1FxcnHVfXmhJGThEgyBc8imHcPNw==
   dependencies:
     "@theme-ui/prism" "^0.4.0-rc.5"
     date-fns "^2.16.1"
