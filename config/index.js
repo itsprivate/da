@@ -39,7 +39,7 @@ const siteMetadata = {
       menuLinks: [
         // {
         //   name: "Weekly Selection",
-        //   url: "/issues",
+        //   url: "/en/issues",
         // },
         {
           name: "RSS",
@@ -57,7 +57,7 @@ const siteMetadata = {
       menuLinks: [
         // {
         // name: "每週精選",
-        // url: "/issues",
+        // url: "/zh-Hant/issues",
         // },
         {
           name: "RSS",
