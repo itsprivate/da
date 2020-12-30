@@ -7045,10 +7045,10 @@ gatsby-theme-blog-core@^2.0.2:
     gatsby-transformer-sharp "^2.5.11"
     remark-slug "^5.1.2"
 
-gatsby-theme-buzzing@^0.17.1:
-  version "0.17.1"
-  resolved "https://registry.npmjs.org/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.17.1.tgz#c0bcb670ce07ccbf65f375fb0fb976a9547696d7"
-  integrity sha512-epv2dlSZpbweSWFdvLiOeHDta+QwArw4Ffw1namNsfBp1l1PcuE3qCJvpU8NlUJCMH/tbLhOQ3kBnvpJu2h1uA==
+gatsby-theme-buzzing@^0.19.0:
+  version "0.19.0"
+  resolved "https://registry.npmjs.org/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.19.0.tgz#e5782d53cf5b0eccb44b57fa9229cec0000242a8"
+  integrity sha512-+5Dp21SOWLd0UJahhb2f43p09xQyBWLpKfwBFPFRfPYaEx6PFxIo+Od2Ze6wyhkVxisOLQtvR/Yp1/EiKxV6Bw==
   dependencies:
     fs-extra "^9.0.1"
     gatsby-plugin-emotion "^4.3.10"
@@ -7056,7 +7056,7 @@ gatsby-theme-buzzing@^0.17.1:
     gatsby-plugin-robots-txt "^1.5.5"
     gatsby-plugin-sitemap "^2.8.0"
     gatsby-theme-i18n-react-i18next "^1.0.4"
-    gatsby-theme-timeline "^0.1.104"
+    gatsby-theme-timeline "^0.1.106"
     gatsby-transformer-json "^2.4.14"
     path "^0.12.7"
     theme-ui "^0.4.0-rc.5"
@@ -7074,10 +7074,10 @@ gatsby-theme-i18n@^1.0.4:
     gatsby-plugin-react-helmet "^3.3.10"
     react-helmet "^6.1.0"
 
-gatsby-theme-timeline@^0.1.104:
-  version "0.1.104"
-  resolved "https://registry.npmjs.org/gatsby-theme-timeline/-/gatsby-theme-timeline-0.1.104.tgz#b45982a4f3bc29dcfe7e7b84004193dcf860b642"
-  integrity sha512-aqgshf3z4bZsclR9QWMHSBU9nwZk6vMHFD64AwCPRz0nuIoyp//f2xK2IV0JaTjPPYJr3ka1DYOp33qBd1fijg==
+gatsby-theme-timeline@^0.1.106:
+  version "0.1.106"
+  resolved "https://registry.npmjs.org/gatsby-theme-timeline/-/gatsby-theme-timeline-0.1.106.tgz#3a8783be5ea81457c203e47013b60d9298040f03"
+  integrity sha512-cb+R3IHVRs8qrQPnQs/rl8T0v7o4h5sZiRHuUZ3nKUWknZzPdkuihGHpAqmrk0XHtqXJOqGWn4zZCCQpi5LObg==
   dependencies:
     "@theme-ui/prism" "^0.4.0-rc.5"
     date-fns "^2.16.1"
@@ -7095,7 +7095,7 @@ gatsby-theme-timeline@^0.1.104:
     gatsby-transformer-json "^2.4.14"
     html-to-text "^6.0.0"
     path "^0.12.7"
-    react-helmet "^5.2.1"
+    react-helmet "^6.1.0"
     react-player "^2.7.2"
     react-process-string "^1.2.0"
     react-twemoji "^0.3.0"
@@ -11890,7 +11890,7 @@ prompts@^2.3.2:
     kleur "^3.0.3"
     sisteransi "^1.0.5"
 
-prop-types@^15.0.0, prop-types@^15.5.4, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
+prop-types@^15.0.0, prop-types@^15.6.1, prop-types@^15.6.2, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.npmjs.org/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -12167,25 +12167,10 @@ react-error-overlay@^3.0.0:
   resolved "https://registry.npmjs.org/react-error-overlay/-/react-error-overlay-3.0.0.tgz#c2bc8f4d91f1375b3dad6d75265d51cd5eeaf655"
   integrity sha512-XzgvowFrwDo6TWcpJ/WTiarb9UI6lhA4PMzS7n1joK3sHfBBBOQHUc0U4u57D6DWO9vHv6lVSWx2Q/Ymfyv4hw==
 
-react-fast-compare@^2.0.2:
-  version "2.0.4"
-  resolved "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-2.0.4.tgz#e84b4d455b0fec113e0402c329352715196f81f9"
-  integrity sha512-suNP+J1VU1MWFKcyt7RtjiSWUjvidmQSlqu+eHslq+342xCbGTYmC0mEhPCOHxlW0CywylOC1u2DFAT+bv4dBw==
-
 react-fast-compare@^3.0.1, react-fast-compare@^3.1.1:
   version "3.2.0"
   resolved "https://registry.npmjs.org/react-fast-compare/-/react-fast-compare-3.2.0.tgz#641a9da81b6a6320f270e89724fb45a0b39e43bb"
   integrity sha512-rtGImPZ0YyLrscKI9xTpV8psd6I8VAtjKCzQDlzyDvqJA8XOW78TXYQwNRNd8g8JZnDu8q9Fu/1v4HPAVwVdHA==
-
-react-helmet@^5.2.1:
-  version "5.2.1"
-  resolved "https://registry.npmjs.org/react-helmet/-/react-helmet-5.2.1.tgz#16a7192fdd09951f8e0fe22ffccbf9bb3e591ffa"
-  integrity sha512-CnwD822LU8NDBnjCpZ4ySh8L6HYyngViTZLfBBb3NjtrpN8m49clH8hidHouq20I51Y6TpCTISCBbqiY5GamwA==
-  dependencies:
-    object-assign "^4.1.1"
-    prop-types "^15.5.4"
-    react-fast-compare "^2.0.2"
-    react-side-effect "^1.1.0"
 
 react-helmet@^6.1.0:
   version "6.1.0"
@@ -12249,13 +12234,6 @@ react-refresh@^0.8.3:
   version "0.8.3"
   resolved "https://registry.npmjs.org/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
-
-react-side-effect@^1.1.0:
-  version "1.2.0"
-  resolved "https://registry.npmjs.org/react-side-effect/-/react-side-effect-1.2.0.tgz#0e940c78faba0c73b9b0eba9cd3dda8dfb7e7dae"
-  integrity sha512-v1ht1aHg5k/thv56DRcjw+WtojuuDHFUgGfc+bFHOWsF4ZK6C2V57DO0Or0GPsg6+LSTE0M6Ry/gfzhzSwbc5w==
-  dependencies:
-    shallowequal "^1.0.1"
 
 react-side-effect@^2.1.0:
   version "2.1.1"
@@ -13235,7 +13213,7 @@ shallow-compare@^1.2.2:
   resolved "https://registry.npmjs.org/shallow-compare/-/shallow-compare-1.2.2.tgz#fa4794627bf455a47c4f56881d8a6132d581ffdb"
   integrity sha512-LUMFi+RppPlrHzbqmFnINTrazo0lPNwhcgzuAXVVcfy/mqPDrQmHAyz5bvV0gDAuRFrk804V0HpQ6u9sZ0tBeg==
 
-shallowequal@^1.0.1, shallowequal@^1.1.0:
+shallowequal@^1.1.0:
   version "1.1.0"
   resolved "https://registry.npmjs.org/shallowequal/-/shallowequal-1.1.0.tgz#188d521de95b9087404fd4dcb68b13df0ae4e7f8"
   integrity sha512-y0m1JoUZSlPAjXVtPPW70aZWfIL/dSP7AFkRnniLCrK/8MDKog3TySTBmckD+RObVxH0v4Tox67+F14PdED2oQ==
