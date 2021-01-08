@@ -60,6 +60,8 @@ plugins = plugins.concat([
       theme_color: `#FF4500`,
       display: `standalone`,
       icon: `src/images/icon.png`,
+      telegram: siteMetadata.telegram,
+      telegram_chat_id: siteMetadata.telegram_chat_id,
       localize: siteMetadata.localize.map((item) => {
         return {
           start_url: `/${item.locale}/`,
