@@ -6,7 +6,7 @@ const siteMetadata = {
   shortTitle: "全球头条",
   description: "用中文浏览谷歌全球新闻(西方媒体)头条",
   keywords: ["buzzing", "西方媒体", "国外新闻", "世界新闻", "突发新闻"],
-  telegram: "buzzingcc",
+  telegram: "@buzzingcc",
   telegram_chat_id: "-1001406368978",
   menuLinks: [
     // {
