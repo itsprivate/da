@@ -19,6 +19,23 @@ const siteMetadata = {
       prefetch: false,
     },
   ],
+  subscriptions: [
+    {
+      name: "Twitter @buzzingcc",
+      url: "https://twitter.com/buzzingcc",
+      external: true,
+    },
+    {
+      name: "Telegram @buzzingcc",
+      url: "https://t.me/buzzingcc",
+      external: true,
+    },
+    {
+      name: "RSS",
+      url: "/rss.xml",
+      prefetch: false,
+    },
+  ],
   social: [
     {
       name: `Google News`,
