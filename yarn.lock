@@ -7047,7 +7047,7 @@ gatsby-theme-blog-core@^2.0.4:
 
 gatsby-theme-buzzing@^0.27.0:
   version "0.27.0"
-  resolved "https://registry.npmjs.org/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.27.0.tgz#ebda481a01f038246bdb666b44c246f88ef0d49f"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.27.0.tgz#ebda481a01f038246bdb666b44c246f88ef0d49f"
   integrity sha512-I4N8Wtj2YkJEF1iCEeZuUnEufI460RLgymkSLWxSClUFjoKgiCyCkv+nE45jqPtJ2cFsQFAdv4q8c47ov+2yBw==
   dependencies:
     fs-extra "^9.0.1"
