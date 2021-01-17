@@ -7045,10 +7045,10 @@ gatsby-theme-blog-core@^2.0.4:
     gatsby-transformer-sharp "^2.5.11"
     remark-slug "^5.1.2"
 
-gatsby-theme-buzzing@^0.27.2:
-  version "0.27.2"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.27.2.tgz#c0f9486ac257efedb3fbbd8d1fea17c4d3940757"
-  integrity sha512-C2VGN6Mcb5tJV7jsEO2AM95EKrqwXgFMQRJ4tC85GVuU62cd0c2M06mHnQ9b/mBjhiz557ZmvOSESCuZcBC2pg==
+gatsby-theme-buzzing@^0.27.3:
+  version "0.27.3"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.27.3.tgz#125385c51c3f13c873898e3d356f696f9dd4a343"
+  integrity sha512-ro/Pdek+6QbyeODZAoACoDP2nXx8tUl/FdgxH0EFrHm1aIVL/SAgWmmzFVF+AbDKuD2bHXgGSYVRa7AQkldiSA==
   dependencies:
     fs-extra "^9.0.1"
     gatsby-plugin-emotion "^4.3.10"
