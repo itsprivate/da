@@ -6647,10 +6647,10 @@ gatsby-graphiql-explorer@^0.7.0:
   dependencies:
     "@babel/runtime" "^7.12.5"
 
-gatsby-image@^2.4.13:
-  version "2.7.0"
-  resolved "https://registry.npmjs.org/gatsby-image/-/gatsby-image-2.7.0.tgz#852cb0dd6ba971bd5f5e3a3b86d018afcba71d10"
-  integrity sha512-Ae5teH/iPF9n7NKQP62r5kDz6Rhv4YXpEsUdptRsRH6ioeykGtO1NcYjcsHWo24KrM3fd06LKU9LiGJ5pLrQgg==
+gatsby-image@^2.11.0:
+  version "2.11.0"
+  resolved "https://registry.yarnpkg.com/gatsby-image/-/gatsby-image-2.11.0.tgz#5bbd02c3dcf78291131de26da061b4180bb67e6e"
+  integrity sha512-H1va64RgXizYXONhoqB3rAdSqALZi0hkBYqEsc0peVEYzb2maRhEwOchg65hKvp3HT/ahnfrik59epRguYvi/g==
   dependencies:
     "@babel/runtime" "^7.12.5"
     object-fit-images "^3.2.4"
@@ -6719,6 +6719,13 @@ gatsby-plugin-hn@^0.5.0:
   version "0.5.0"
   resolved "https://registry.yarnpkg.com/gatsby-plugin-hn/-/gatsby-plugin-hn-0.5.0.tgz#09671fe5b6f9f8467bf43d76446b1ea25c27a67b"
   integrity sha512-spXzVyPpQ3iUpZBlhE8oE+58Yx6C9gVQWEtJk+rBQmprtMIm17Ixdw0ePmx0OEbDHCPG4b9vTr1jxRsM9xoyLQ==
+  dependencies:
+    "@babel/runtime" "^7.8.7"
+
+gatsby-plugin-instagram@^0.0.3:
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-instagram/-/gatsby-plugin-instagram-0.0.3.tgz#21d9fbc3dc0a689ec7e96927d57cb07727b8deec"
+  integrity sha512-PVeu6Kjruys4TVXNU4NlSzJKASmopled0GuX5jGc+gv50x2QRglUwYSqSPfceI5ReAn0HD1s+jnbWD9NBk7+Hw==
   dependencies:
     "@babel/runtime" "^7.8.7"
 
@@ -7045,10 +7052,10 @@ gatsby-theme-blog-core@^2.0.4:
     gatsby-transformer-sharp "^2.5.11"
     remark-slug "^5.1.2"
 
-gatsby-theme-buzzing@^0.27.3:
-  version "0.27.3"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.27.3.tgz#125385c51c3f13c873898e3d356f696f9dd4a343"
-  integrity sha512-ro/Pdek+6QbyeODZAoACoDP2nXx8tUl/FdgxH0EFrHm1aIVL/SAgWmmzFVF+AbDKuD2bHXgGSYVRa7AQkldiSA==
+gatsby-theme-buzzing@^0.27.4:
+  version "0.27.4"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.27.4.tgz#db9376e6677ef90a03479730f8cc51bcd5366d5a"
+  integrity sha512-h9lRgggnUkAQFGC8KN4IwArbp+wLP+XzfjRuSBSQz6ZKO4f7ASXMziJ30gXRQeRXr+CQxpudYBLMskxs3qgvgQ==
   dependencies:
     fs-extra "^9.0.1"
     gatsby-plugin-emotion "^4.3.10"
@@ -7056,7 +7063,7 @@ gatsby-theme-buzzing@^0.27.3:
     gatsby-plugin-robots-txt "^1.5.5"
     gatsby-plugin-sitemap "^2.8.0"
     gatsby-theme-i18n-react-i18next "^1.0.4"
-    gatsby-theme-timeline "^0.2.13"
+    gatsby-theme-timeline "^0.3.6"
     gatsby-transformer-json "^2.4.14"
     path "^0.12.7"
     theme-ui "^0.4.0-rc.5"
@@ -7074,17 +7081,18 @@ gatsby-theme-i18n@^1.0.4:
     gatsby-plugin-react-helmet "^3.3.10"
     react-helmet "^6.1.0"
 
-gatsby-theme-timeline@^0.2.13:
-  version "0.2.13"
-  resolved "https://registry.npmjs.org/gatsby-theme-timeline/-/gatsby-theme-timeline-0.2.13.tgz#ac7a1f673574aecf02cf452d6c67a64d3ffd8bfb"
-  integrity sha512-tahUk85rgqHtYGXhmiFVknEldPSzfHQJBAfaOqA40Bqf2nkESF+oBh/uj5fQzxd+LOZH5g0TGn+sytL4/glnvQ==
+gatsby-theme-timeline@^0.3.6:
+  version "0.3.6"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-timeline/-/gatsby-theme-timeline-0.3.6.tgz#28834fa317a0d8d0ea956d19a2e96b3b07cef9fe"
+  integrity sha512-G0Y8mljY58N3u4m+D7j4GS4wtug8cUM+m4zBBiMzuMe9NzD9DbKU+gc79K4vVZN2d4M1/l5mlyjM508HILrqhw==
   dependencies:
     "@theme-ui/prism" "^0.4.0-rc.5"
     date-fns "^2.16.1"
     disqus-react "^1.0.10"
-    gatsby-image "^2.4.13"
+    gatsby-image "^2.11.0"
     gatsby-plugin-emotion "^4.3.10"
     gatsby-plugin-hn "^0.5.0"
+    gatsby-plugin-instagram "^0.0.3"
     gatsby-plugin-react-helmet "^3.3.10"
     gatsby-plugin-reddit "^0.1.0"
     gatsby-plugin-theme-ui "^0.4.0-rc.5"
