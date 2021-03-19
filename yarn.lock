@@ -959,6 +959,13 @@
   dependencies:
     regenerator-runtime "^0.13.4"
 
+"@babel/runtime@^7.2.0":
+  version "7.13.10"
+  resolved "https://registry.yarnpkg.com/@babel/runtime/-/runtime-7.13.10.tgz#47d42a57b6095f4468da440388fdbad8bebf0d7d"
+  integrity sha512-4QPkjJq6Ns3V/RgpEahRk+AGfL0eO6RHHtTWoNNr5mO49G6B5+X6d6THgWEAvTrznU5xYpbAlVKRYcsCgh/Akw==
+  dependencies:
+    regenerator-runtime "^0.13.4"
+
 "@babel/standalone@^7.12.6":
   version "7.12.10"
   resolved "https://registry.npmjs.org/@babel/standalone/-/standalone-7.12.10.tgz#f77f6750d0ab88c7c23234dd2d2f3800f170a573"
@@ -6707,6 +6714,13 @@ gatsby-plugin-feed@^2.7.0:
     lodash.merge "^4.6.2"
     rss "^1.2.2"
 
+gatsby-plugin-google-adsense@^1.1.3:
+  version "1.1.3"
+  resolved "https://registry.yarnpkg.com/gatsby-plugin-google-adsense/-/gatsby-plugin-google-adsense-1.1.3.tgz#267e24880a7634d988bb09b920a115a80f826d55"
+  integrity sha512-tzEg4UIMXCTn+NSB580jzvOgDVTY/+ZbSwQ0EfHUDDqdnvI5KnSQP84mGC5bd96Qy9L15+l9ZRtZ17EdoKBe7g==
+  dependencies:
+    "@babel/runtime" "^7.2.0"
+
 gatsby-plugin-google-gtag@^2.4.0:
   version "2.4.0"
   resolved "https://registry.npmjs.org/gatsby-plugin-google-gtag/-/gatsby-plugin-google-gtag-2.4.0.tgz#b805e9c625765549a7d878cbb8a34100f2689eed"
@@ -7052,20 +7066,22 @@ gatsby-theme-blog-core@^2.0.4:
     gatsby-transformer-sharp "^2.5.11"
     remark-slug "^5.1.2"
 
-gatsby-theme-buzzing@^0.29.0:
-  version "0.29.0"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.29.0.tgz#7ecf4b8b27e30d2cbb3c8c8648fbc4c918f253fc"
-  integrity sha512-2yMFtjYfGp7PYFbhjyyTX6q8e71T+3IKSZ1j/LlrQ/NfHgRk1WxlBtSWj42eDb+4sywv8ExJblkx1O2yhcVwvg==
+gatsby-theme-buzzing@^0.30.0:
+  version "0.30.0"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-buzzing/-/gatsby-theme-buzzing-0.30.0.tgz#5bf2f80a209cd16cd46ecf0030a1996835e58185"
+  integrity sha512-uj2ZbQ0zR2DI4I154HRo79oBTQNFoZav/k0nsfD5YQuNHdTtmvOdjR9im+vsnX7RnrqI+CmLpKhPZ+R4vEKACg==
   dependencies:
     fs-extra "^9.0.1"
     gatsby-plugin-emotion "^4.3.10"
     gatsby-plugin-feed "^2.7.0"
+    gatsby-plugin-google-adsense "^1.1.3"
     gatsby-plugin-robots-txt "^1.5.5"
     gatsby-plugin-sitemap "^2.8.0"
     gatsby-theme-i18n-react-i18next "^1.0.4"
     gatsby-theme-timeline "^0.3.6"
     gatsby-transformer-json "^2.4.14"
     path "^0.12.7"
+    react-adsense "^0.1.0"
     theme-ui "^0.4.0-rc.5"
 
 gatsby-theme-i18n-react-i18next@^1.0.4:
@@ -12135,6 +12151,11 @@ rc@^1.2.7, rc@^1.2.8:
     ini "~1.3.0"
     minimist "^1.2.0"
     strip-json-comments "~2.0.1"
+
+react-adsense@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/react-adsense/-/react-adsense-0.1.0.tgz#f170007a9ab05ee2cd1c915cdc9788624658e3c1"
+  integrity sha512-VzGMH9qA7bBKAveK1joFWphhB7e2Y1ToSGzUa8b7eit3+VSkg/2MSvKxe5d/r4mcmkOHu6CHNJW0nn6RQC3IZA==
 
 react-dev-utils@^4.2.3:
   version "4.2.3"
