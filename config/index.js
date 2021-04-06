@@ -91,6 +91,16 @@ const siteMetadata = {
         // },
       ],
     },
+    {
+      locale: "ja",
+      title: "データの美しさ",
+      shortTitle: "データの美しさ",
+      description: "数字を使用して世界、データの視覚化と統計に関するすべての情報を理解する",
+      keywords: ["buzzing", "データの美しさ",],
+      menuLinks: [
+     
+      ],
+    }
   ],
 };
 
