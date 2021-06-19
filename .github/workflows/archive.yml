@@ -1,4 +1,4 @@
-name: Deploy
+name: Archive
 on:
   workflow_dispatch:
   repository_dispatch:
