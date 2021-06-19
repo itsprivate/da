@@ -11,12 +11,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Build
     steps:
-      - name:  Check is building
+      - name: Check is building
         uses: actions/github-script@v4
         id: shouldBuild
         with:
           github-token: ${{secrets.GITHUB_TOKEN}}
-          script: | 
+          script: |
             const runed = await github.actions.listWorkflowRuns({
               owner: context.repo.owner,
               repo: context.repo.repo,
@@ -42,19 +42,15 @@ jobs:
       - name: install
         run: "npm i"
         if: steps.shouldBuild.outputs.result=='1'
-
-      - name: Yarn install
-        if: steps.shouldBuild.outputs.result=='1'
-        run: "yarn --pure-lockfile"
       - name: Build
         if: steps.shouldBuild.outputs.result=='1'
-        run: yarn build
+        run: npm run build
       - name: Deploy
         if: steps.shouldBuild.outputs.result=='1'
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./public
-          force_orphan: true
+          force_orphan: false
           user_name: "github-actions[bot]"
           user_email: "github-actions[bot]@users.noreply.github.com"
