@@ -13,7 +13,8 @@
     "archive": "npm run clean && trash .env && npm run build && trash ./static && cpy ./original-static ./static && cpy ./public ./static && echo GATSBY_ARCHIVE_TIME=$(npx date-cli) > .env",
     "archive:dev": "npm run clean && trash .env && npm run build:dev && trash ./static && cpy ./original-static ./static && cpy ./public ./static && echo GATSBY_ARCHIVE_TIME=$(npx date-cli) > .env",
     "start:prod": "LOCAL=false npm start",
-    "build:dev": "LOCAL=true gatsby build"
+    "build:dev": "LOCAL=true gatsby build",
+    "upstream": "git remote add upstream git@github.com:itsprivate/dev.git"
   },
   "dependencies": {
     "@theowenyoung/gatsby-source-git": "^2.2.2",
