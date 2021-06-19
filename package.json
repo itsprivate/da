@@ -10,7 +10,8 @@
     "build": "gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "archive": "npm run build && trash ./static && cpy ./original-static ./static && cpy ./public ./static && echo GATSBY_ARCHIVE_TIME=$(npx date-cli) > .env",
+    "archive": "npm run clean && trash .env && npm run build && trash ./static && cpy ./original-static ./static && cpy ./public ./static && echo GATSBY_ARCHIVE_TIME=$(npx date-cli) > .env",
+    "archive:dev": "npm run clean && trash .env && npm run build:dev && trash ./static && cpy ./original-static ./static && cpy ./public ./static && echo GATSBY_ARCHIVE_TIME=$(npx date-cli) > .env",
     "start:prod": "LOCAL=false npm start",
     "build:dev": "LOCAL=true gatsby build"
   },
@@ -21,7 +22,7 @@
     "gatsby": "^3.0.0",
     "gatsby-plugin-google-gtag": "^3.7.1",
     "gatsby-plugin-manifest": "^3.7.1",
-    "gatsby-theme-buzzing": "^1.2.0",
+    "gatsby-theme-buzzing": "^1.2.1",
     "i18next": "^19.4.5",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
