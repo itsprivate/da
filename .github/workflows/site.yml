@@ -23,7 +23,17 @@ jobs:
               workflow_id: "site.yml",
               status:"in_progress"
             });
-            return runed.data.total_count
+            const archiveRuned = await github.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: "archive.yml",
+              status:"in_progress"
+            });
+            let totalCount = 1;
+            if(runed.data.total_count == 1 || archiveRuned.data.total_count == 1){
+              totalCount = 2
+            }
+            return totalCount
           result-encoding: string
       - name: Checkout Repo
         if: steps.shouldBuild.outputs.result=='1'
