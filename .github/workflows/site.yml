@@ -39,11 +39,15 @@ jobs:
         if: steps.shouldBuild.outputs.result=='1'
         uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
+        if: steps.shouldBuild.outputs.result=='1'
         with:
           node-version: "14"
       - run: npm i npm -g
+        if: steps.shouldBuild.outputs.result=='1'
       - run: npm version
+        if: steps.shouldBuild.outputs.result=='1'
       - uses: actions/cache@v2
+        if: steps.shouldBuild.outputs.result=='1'
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
