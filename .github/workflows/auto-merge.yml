@@ -7,7 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Merge
-        if: (github.actor=='theowenyoung' || github.actor=='imprivate') && (github.head_ref=='update-dependencies')
+        if: (github.actor=='theowenyoung' || github.actor=='imprivate') && (github.head_ref=='update-dependencies' || github.head_ref=='archive')
         uses: KeisukeYamashita/auto-pull-request-merge@v1
         with:
           intervalSeconds: 10
