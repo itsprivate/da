@@ -15,19 +15,11 @@
     "build:dev": "LOCAL=true gatsby build"
   },
   "dependencies": {
-<<<<<<< HEAD
     "@theowenyoung/gatsby-source-git": "^2.2.2",
     "gatsby": "^3.0.0",
     "gatsby-plugin-google-gtag": "^3.7.1",
     "gatsby-plugin-manifest": "^3.7.1",
     "gatsby-theme-buzzing": "^1.1.5",
-=======
-    "@theowenyoung/gatsby-source-git": "^1.1.2",
-    "gatsby": "^2.26.1",
-    "gatsby-plugin-google-gtag": "^2.4.0",
-    "gatsby-plugin-manifest": "^2.8.0",
-    "gatsby-theme-buzzing": "^1.0.0",
->>>>>>> f2254eefed3bd09c19e2202184d75a744dc2f52f
     "i18next": "^19.4.5",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
