@@ -17,13 +17,14 @@
     "upstream": "git remote add upstream git@github.com:itsprivate/gatsby-buzzing-starter.git"
   },
   "dependencies": {
+    "-": "^0.0.1",
     "@theowenyoung/gatsby-source-git": "^2.2.2",
     "cpy-cli": "^3.1.1",
     "date-cli": "^1.0.0",
     "gatsby": "^3.0.0",
     "gatsby-plugin-google-gtag": "^3.7.1",
     "gatsby-plugin-manifest": "^3.7.1",
-    "gatsby-theme-buzzing": "^1.2.2",
+    "gatsby-theme-buzzing": "^1.2.3",
     "i18next": "^19.4.5",
     "react": "^17.0.0",
     "react-dom": "^17.0.0",
