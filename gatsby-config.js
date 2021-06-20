@@ -2,6 +2,7 @@ const { siteMetadata } = require("./config");
 const isDev =
   (process.env.NODE_ENV === "development" || process.env.LOCAL === "true") &&
   process.env.LOCAL !== "false";
+
 let localesPath =
   ".cache/gatsby-source-git/itsprivate/ts/RedditTop/i18n/i18next";
 if (isDev) {

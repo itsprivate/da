@@ -1,11 +1,8 @@
-name: Deploy
+name: Archive
 on:
-  push:
-    branches:
-      - main
   workflow_dispatch:
   repository_dispatch:
-    types: [redeploy]
+    types: [archive]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -20,34 +17,20 @@ jobs:
             const runed = await github.actions.listWorkflowRuns({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              workflow_id: "site.yml",
-              status:"in_progress"
-            });
-            const archiveRuned = await github.actions.listWorkflowRuns({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
               workflow_id: "archive.yml",
               status:"in_progress"
             });
-            let totalCount = 2;
-            if(runed.data.total_count == 1 || archiveRuned.data.total_count == 1){
-              totalCount = 1;
-            }
-            return totalCount
+            return runed.data.total_count
           result-encoding: string
       - name: Checkout Repo
         if: steps.shouldBuild.outputs.result=='1'
         uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
-        if: steps.shouldBuild.outputs.result=='1'
         with:
           node-version: "14"
       - run: npm i npm -g
-        if: steps.shouldBuild.outputs.result=='1'
       - run: npm version
-        if: steps.shouldBuild.outputs.result=='1'
       - uses: actions/cache@v2
-        if: steps.shouldBuild.outputs.result=='1'
         with:
           path: ~/.npm
           key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
@@ -56,15 +39,15 @@ jobs:
       - name: install
         run: "npm i"
         if: steps.shouldBuild.outputs.result=='1'
-      - name: Build
+      - name: Build Archive
         if: steps.shouldBuild.outputs.result=='1'
-        run: npm run build
-      - name: Deploy
+        run: npm run archive
+      - name: Create Pull Request
         if: steps.shouldBuild.outputs.result=='1'
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peter-evans/create-pull-request@v3
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
-          force_orphan: false
-          user_name: "github-actions[bot]"
-          user_email: "github-actions[bot]@users.noreply.github.com"
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          commit-message: "chore: archive files"
+          branch: archive
+          delete-branch: true
+          title: "chore: archive files"

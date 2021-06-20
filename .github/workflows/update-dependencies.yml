@@ -10,10 +10,10 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - name: Yarn add
-        run: yarn add gatsby-theme-buzzing
-      - name: Yarn
-        run: "yarn"
+      - name: npm install
+        run: npm install gatsby-theme-buzzing -S
+      - name: npm install
+        run: "npm install"
       - name: Create Pull Request
         uses: peter-evans/create-pull-request@v3
         with:
