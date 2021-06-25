@@ -1,0 +1,58 @@
+name: Archive
+on:
+  workflow_dispatch:
+    inputs:
+      envs:
+        description: "env"
+        required: false
+        default: ""
+  repository_dispatch:
+    types: [archive]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - name: Check is building
+        uses: actions/github-script@v4
+        id: shouldBuild
+        with:
+          github-token: ${{secrets.GITHUB_TOKEN}}
+          script: |
+            const runed = await github.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: "archive.yml",
+              status:"in_progress"
+            });
+            return runed.data.total_count
+          result-encoding: string
+      - name: Checkout Repo
+        if: steps.shouldBuild.outputs.result=='1'
+        uses: actions/checkout@v2
+      - uses: actions/setup-node@v2-beta
+        with:
+          node-version: "14"
+      - run: npm i npm -g
+      - run: npm version
+      - uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+      - name: install
+        run: "npm i"
+        if: steps.shouldBuild.outputs.result=='1'
+      - name: Build Archive
+        if: steps.shouldBuild.outputs.result=='1'
+        run: ${{ github.event.inputs.envs }} npm run archive:detail
+      - name: Create Pull Request
+        if: steps.shouldBuild.outputs.result=='1'
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          commit-message: "chore: archive files"
+          branch: archive
+          delete-branch: true
+          title: "chore: archive files"

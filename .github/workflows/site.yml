@@ -29,7 +29,13 @@ jobs:
               workflow_id: "archive.yml",
               status:"in_progress"
             });
-            const totalCount = runed.data.total_count +  archiveRuned.data.total_count;
+            const archiveDetailRuned = await github.actions.listWorkflowRuns({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              workflow_id: "archive-detail.yml",
+              status:"in_progress"
+            });
+            const totalCount = runed.data.total_count +  archiveRuned.data.total_count + archiveDetailRuned.data.total_count;
             return totalCount
           result-encoding: string
       - name: Checkout Repo
