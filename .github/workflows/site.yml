@@ -29,7 +29,7 @@ jobs:
               workflow_id: "archive.yml",
               status:"in_progress"
             });
-            let totalCount = runed.data.total_count +  archiveRuned.data.total_count;
+            const totalCount = runed.data.total_count +  archiveRuned.data.total_count;
             return totalCount
           result-encoding: string
       - name: Checkout Repo
