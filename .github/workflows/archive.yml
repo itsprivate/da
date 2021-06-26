@@ -1,5 +1,7 @@
 name: Archive
 on:
+  schedule:
+    - cron: "5 4 2 * *"
   workflow_dispatch:
   repository_dispatch:
     types: [archive]
