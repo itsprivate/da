@@ -47,7 +47,6 @@ plugins = plugins.concat([
       disqus: {
         shortname: "buzzingcc",
       },
-      siteMetadata,
     },
   },
   {
