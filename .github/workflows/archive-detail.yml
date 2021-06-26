@@ -1,4 +1,4 @@
-name: Archive
+name: Archive Detail
 on:
   workflow_dispatch:
     inputs:
