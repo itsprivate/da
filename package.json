@@ -11,8 +11,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "archive:detail": "npm run clean && cp -r \"./original-static/\" ./static/  && GATSBY_SKIP_CREATE_INDEX_PAGES=true GATSBY_SKIP_CREATE_TAG_PAGES=true npm run build && cp -r \"./public/\" ./static/",
-    "archive": "npm run archive:detail && npm run clean && cp -r \"./original-static/\" ./static/ &&  GATSBY_SHOULD_ARCHIVE=true GATSBY_SKIP_CREATE_INDEX_PAGES=true GATSBY_SKIP_CREATE_DETAIL_PAGES=true GATSBY_POST_END_TIME=$(npx date-cli sub --from monthBeginning --months 2) npm run build && cp -r \"./public/\" ./static/ && echo GATSBY_POST_START_TIME=$(npx date-cli sub --from monthBeginning --months 2) > .env",
-    "archive:dev": "npm run archive:detail && npm run clean && cp -r \"./original-static/\" ./static/ &&  GATSBY_SHOULD_ARCHIVE=true GATSBY_SKIP_CREATE_INDEX_PAGES=true GATSBY_SKIP_CREATE_DETAIL_PAGES=true GATSBY_POST_END_TIME=$(npx date-cli sub --from monthBeginning --months 2) npm run build:dev && cp -r \"./public/\" ./static/ && echo GATSBY_POST_START_TIME=$(npx date-cli sub --from monthBeginning --months 2) > .env",
+    "archive": "npm run clean && cp -r \"./original-static/\" ./static/ &&  GATSBY_SHOULD_ARCHIVE=true GATSBY_SKIP_CREATE_INDEX_PAGES=true GATSBY_SKIP_CREATE_DETAIL_PAGES=false GATSBY_POST_END_TIME=$(npx date-cli sub --from monthBeginning --months 2) npm run build && cp -r \"./public/\" ./static/ && echo GATSBY_POST_START_TIME=$(npx date-cli sub --from monthBeginning --months 2) > .env",
+    "archive:dev": "npm run clean && cp -r \"./original-static/\" ./static/ &&  GATSBY_SHOULD_ARCHIVE=true GATSBY_SKIP_CREATE_INDEX_PAGES=true GATSBY_SKIP_CREATE_DETAIL_PAGES=true GATSBY_POST_END_TIME=$(npx date-cli sub --from monthBeginning --months 2) npm run build:dev && cp -r \"./public/\" ./static/ && echo GATSBY_POST_START_TIME=$(npx date-cli sub --from monthBeginning --months 2) > .env",
     "start:prod": "LOCAL=false npm start",
     "build:dev": "LOCAL=true gatsby build",
     "upstream": "git remote add upstream git@github.com:itsprivate/gatsby-buzzing-starter.git"
