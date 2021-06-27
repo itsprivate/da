@@ -6,3 +6,7 @@ gatsby-starter
 
 1. Change `static/CNAME`
 2. Change `gatsby-config.js`
+
+## Licence
+
+MIT
