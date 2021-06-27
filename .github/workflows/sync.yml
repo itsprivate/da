@@ -10,6 +10,9 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
+        with:
+          ref: main # set the branch to merge to
+          fetch-depth: 0
       - run: git remote add upstream https://github.com/itsprivate/gatsby-buzzing-starter.git
       - name: sync
         run: git pull upstream main --commit --no-edit
