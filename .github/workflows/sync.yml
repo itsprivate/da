@@ -10,7 +10,7 @@ jobs:
     steps:
       - name: Checkout Repo
         uses: actions/checkout@v2
-      - run: git remote add upstream git@github.com:itsprivate/gatsby-buzzing-starter.git
+      - run: git remote add upstream https://github.com/itsprivate/gatsby-buzzing-starter.git
       - name: sync
         run: git pull upstream main --commit --no-edit
       - name: Create Pull Request
