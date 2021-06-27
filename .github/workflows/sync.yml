@@ -14,6 +14,7 @@ jobs:
           ref: main # set the branch to merge to
           fetch-depth: 0
       - run: git remote add upstream https://github.com/itsprivate/gatsby-buzzing-starter.git
+      - run: git config --global user.email "test@example.com" && git config --global user.name "Bot"
       - name: sync
         run: git pull upstream main --commit --no-edit
       - name: Create Pull Request
