@@ -1,8 +1,12 @@
-# RT
+# Starter
 
-For rt starter
+gatsby-starter
 
-## Init
+## Usage
 
 1. Change `static/CNAME`
 2. Change `gatsby-config.js`
+
+## Licence
+
+MIT

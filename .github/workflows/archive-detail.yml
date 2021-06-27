@@ -1,10 +1,13 @@
-name: Archive
+name: Archive Detail
 on:
-  schedule:
-    - cron: "5 4 2 * *"
   workflow_dispatch:
+    inputs:
+      envs:
+        description: "env"
+        required: false
+        default: ""
   repository_dispatch:
-    types: [archive]
+    types: [archive-detail]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -19,7 +22,7 @@ jobs:
             const runed = await github.actions.listWorkflowRuns({
               owner: context.repo.owner,
               repo: context.repo.repo,
-              workflow_id: "archive.yml",
+              workflow_id: "archive-detail.yml",
               status:"in_progress"
             });
             return runed.data.total_count
@@ -43,7 +46,7 @@ jobs:
         if: steps.shouldBuild.outputs.result=='1'
       - name: Build Archive
         if: steps.shouldBuild.outputs.result=='1'
-        run: npm run archive
+        run: ${{ github.event.inputs.envs }} npm run archive:detail
       - name: Create Pull Request
         if: steps.shouldBuild.outputs.result=='1'
         uses: peter-evans/create-pull-request@v3

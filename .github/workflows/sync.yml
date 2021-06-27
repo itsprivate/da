@@ -1,0 +1,27 @@
+name: Sync
+on:
+  workflow_dispatch:
+  repository_dispatch:
+    types: [sync]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Build
+    steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v2
+        with:
+          ref: main # set the branch to merge to
+          fetch-depth: 0
+      - run: git remote add upstream https://github.com/itsprivate/gatsby-buzzing-starter.git
+      - run: git config --global user.email "test@example.com" && git config --global user.name "Bot"
+      - name: sync
+        run: git pull upstream main --commit --no-edit
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v3
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          commit-message: "chore: auto merge upstream"
+          branch: update-dependencies
+          delete-branch: true
+          title: "chore: auto merge upstream"

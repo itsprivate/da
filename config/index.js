@@ -16,6 +16,7 @@ const siteMetadata = {
   ],
   telegram: "@buzzingcc",
   telegram_chat_id: "-1001406368978",
+  iconUrl: "https://data.buzzing.cc/avatar.jpg",
   menuLinks: [
     // {
     //   name: "每周精选",
