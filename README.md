@@ -1,6 +1,6 @@
-# RT
+# starter
 
-For rt starter
+gatsby-starter
 
 ## Init
 
