@@ -7,7 +7,7 @@ on:
         required: false
         default: ""
   repository_dispatch:
-    types: [archive]
+    types: [archive-detail]
 jobs:
   build:
     runs-on: ubuntu-latest
