@@ -1,4 +1,4 @@
-# starter
+# Starter
 
 gatsby-starter
 
