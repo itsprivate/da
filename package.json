@@ -15,7 +15,8 @@
     "archive:dev": "echo '' > .env && npm run clean && npx ncp ./original-static ./static &&  GATSBY_SHOULD_ARCHIVE=true GATSBY_SKIP_CREATE_INDEX_PAGES=true GATSBY_SKIP_CREATE_DETAIL_PAGES=false GATSBY_POST_END_TIME=$(npx date-cli sub --from monthBeginning --months 2) npm run build:dev && npx ncp ./public ./static",
     "start:prod": "LOCAL=false npm start",
     "build:dev": "LOCAL=true gatsby build",
-    "upstream": "git remote add upstream git@github.com:itsprivate/gatsby-buzzing-starter.git"
+    "upstream": "git remote add upstream git@github.com:itsprivate/gatsby-buzzing-starter.git",
+    "command": ""
   },
   "dependencies": {
     "@theowenyoung/gatsby-source-git": "^2.2.2",
