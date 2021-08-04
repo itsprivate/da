@@ -22,3 +22,9 @@ jobs:
           branch: update-dependencies
           delete-branch: true
           title: "chore: auto update dependencies"
+      - run: sleep 2m
+      - uses: peter-evans/repository-dispatch@v1
+        with:
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          repository: ${{ github.repository }}
+          event-type: redeploy
