@@ -7,7 +7,7 @@
   "scripts": {
     "start": "gatsby develop",
     "develop": "gatsby develop",
-    "build": "gatsby build",
+    "build": "npx ncp ./original-static ./static && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "archive:detail": "npm run clean && npx ncp ./original-static ./static  && GATSBY_SKIP_CREATE_INDEX_PAGES=true GATSBY_SKIP_CREATE_TAG_PAGES=true npm run build && npx ncp ./public ./static",
