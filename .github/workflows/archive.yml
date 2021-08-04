@@ -20,9 +20,9 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               workflow_id: "archive.yml",
-              status:"in_progress"
             });
-            return runed.data.total_count
+            const runedCount=runed.data.workflow_runs.filter(item=>item.status==="in_progress").length;
+            return runedCount;
           result-encoding: string
       - name: Checkout Repo
         if: steps.shouldBuild.outputs.result=='1'
