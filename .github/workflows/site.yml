@@ -21,21 +21,21 @@ jobs:
               owner: context.repo.owner,
               repo: context.repo.repo,
               workflow_id: "site.yml",
-              status:"in_progress"
             });
             const archiveRuned = await github.actions.listWorkflowRuns({
               owner: context.repo.owner,
               repo: context.repo.repo,
               workflow_id: "archive.yml",
-              status:"in_progress"
             });
             const archiveDetailRuned = await github.actions.listWorkflowRuns({
               owner: context.repo.owner,
               repo: context.repo.repo,
               workflow_id: "archive-detail.yml",
-              status:"in_progress"
             });
-            const totalCount = runed.data.total_count +  archiveRuned.data.total_count + archiveDetailRuned.data.total_count;
+            const runedCount=runed.data.workflow_runs.filter(item=>item.status==="in_progress").length;
+            const archiveRunedCount = archiveRuned.data.workflow_runs.filter(item=>item.status==="in_progress").length;
+            const archiveDetailRunedCount = archiveDetailRuned.data.workflow_runs.filter(item=>item.status==="in_progress").length;
+            const totalCount = runedCount + archiveRunedCount + archiveDetailRunedCount;
             return totalCount
           result-encoding: string
       - name: Checkout Repo

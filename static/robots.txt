@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
-Sitemap: https://data.buzzing.cc/sitemap/sitemap-index.xml
-Host: https://data.buzzing.cc
+Sitemap: https://news.buzzing.cc/sitemap/sitemap-index.xml
+Host: https://news.buzzing.cc
