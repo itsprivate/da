@@ -9,23 +9,9 @@ jobs:
   build:
     runs-on: ubuntu-latest
     name: Build
+    concurrency: build
     steps:
-      - name: Check is building
-        uses: actions/github-script@v4
-        id: shouldBuild
-        with:
-          github-token: ${{secrets.GITHUB_TOKEN}}
-          script: |
-            const runed = await github.actions.listWorkflowRuns({
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              workflow_id: "archive.yml",
-            });
-            const runedCount=runed.data.workflow_runs.filter(item=>item.status==="in_progress").length;
-            return runedCount;
-          result-encoding: string
       - name: Checkout Repo
-        if: steps.shouldBuild.outputs.result=='1'
         uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
         with:
@@ -40,12 +26,9 @@ jobs:
             ${{ runner.os }}-node-
       - name: install
         run: "npm i"
-        if: steps.shouldBuild.outputs.result=='1'
       - name: Build Archive
-        if: steps.shouldBuild.outputs.result=='1'
         run: npm run archive
       - name: Create Pull Request
-        if: steps.shouldBuild.outputs.result=='1'
         uses: peter-evans/create-pull-request@v3
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
