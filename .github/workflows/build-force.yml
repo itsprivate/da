@@ -1,4 +1,4 @@
-name: Deploy
+name: ForceDeploy
 on:
   workflow_dispatch:
   repository_dispatch:
