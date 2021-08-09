@@ -27,4 +27,4 @@ jobs:
         with:
           token: ${{ secrets.PERSONAL_TOKEN }}
           repository: ${{ github.repository }}
-          event-type: redeploy
+          event-type: force_redeploy
