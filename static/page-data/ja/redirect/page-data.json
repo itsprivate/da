@@ -1,1 +1,5 @@
-{"componentChunkName":"component---node-modules-gatsby-theme-timeline-src-pages-redirect-js","path":"/ja/redirect/","result":{"pageContext":{"locale":"ja","hrefLang":"ja-JA","originalPath":"/redirect/","dateFormat":"YYYY-MM-DD"}},"staticQueryHashes":["1239077767","2744905544","3280999885"]}
+{
+    "componentChunkName": "component---node-modules-gatsby-theme-timeline-src-pages-redirect-js",
+    "path": "/ja/redirect/",
+    "result": {"pageContext":{"locale":"ja","hrefLang":"ja-JA","originalPath":"/redirect/","dateFormat":"YYYY-MM-DD"}},
+    "staticQueryHashes": ["1239077767","2744905544","3280999885"]}
